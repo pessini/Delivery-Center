@@ -1,3 +1,12 @@
+
+
+-- CREATE USER 'tableau'@'localhost' IDENTIFIED BY 'Tableau0430@';
+-- GRANT SELECT ON delivery_center.* TO tableau@'localhost';
+-- ALTER USER 'tableau'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Tableau0430@';
+
+-- select * from mysql.user;
+
+
 # 1-Qual o número de hubs por cidade?
 
 # 2- Qual o número de pedidos (orders) por status?
