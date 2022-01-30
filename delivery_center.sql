@@ -7,15 +7,40 @@
 -- select * from mysql.user;
 
 
-# 1-Qual o número de hubs por cidade?
+# 1- How many hubs are on each city?
 
-# 2- Qual o número de pedidos (orders) por status?
+SELECT hub_city, COUNT(hub_name) AS contagem
+FROM delivery_center.hubs
+GROUP BY hub_city
+ORDER BY contagem DESC;
 
-# 3- Qual o número de lojas (stores) por cidade dos hubs?
+# 2- Total number of orders by order status.
 
-# 4- Qual o maior e o menor valor de pagamento (payment_amount) registrado?
+SELECT order_status, COUNT(order_id) AS num_pedidos
+FROM delivery_center.orders
+GROUP BY order_status;
 
-# 5- Qual tipo de driver (driver_type) fez o maior número de entregas?
+# 3- What is the number of stores by hub cities?
+
+SELECT hub_city, COUNT(store_id) AS num_lojas
+FROM delivery_center.hubs hubs, delivery_center.stores stores
+WHERE hubs.hub_id = stores.hub_id
+GROUP BY hub_city
+ORDER BY num_lojas DESC;
+
+# 4- What's the maximum and minimum payment amount registered?
+
+SELECT MAX(payment_amount) FROM delivery_center.payments;
+SELECT MIN(payment_amount) FROM delivery_center.payments;
+
+# 5- Which driver type have done the higher number of deliveries?
+
+SELECT driver_type, COUNT(delivery_id) AS num_entregas
+FROM delivery_center.deliveries deliveries, delivery_center.drivers drivers
+WHERE drivers.driver_id = deliveries.driver_id
+GROUP BY driver_type
+ORDER BY num_entregas DESC;
+
 
 # 6- Qual a distância média das entregas por tipo de driver (driver_modal)?
 
