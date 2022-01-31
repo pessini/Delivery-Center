@@ -1,5 +1,4 @@
-# Delivery Center
-<h1 align="center"> SQL Project </h1>
+<h1 align="center">Delivery Center - SQL Project </h1>
 <p align="center">
     <img src="./img/banner.png" width="550">
 </p>
