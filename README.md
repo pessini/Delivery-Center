@@ -1,10 +1,9 @@
-<p align="center">
-  # Delivery Center
-</p>
+# Delivery Center
 <h1 align="center"> SQL Project </h1>
 <p align="center">
     <img src="./img/banner.png" width="550">
 </p>
+
 ### What is Delivery Center?
 
 With several operational hubs across Brazil, Delivery Center is a plataform which integrates shops and marketplaces, creating a healthy ecosystem for selling goods and foods in retail market.
